@@ -4,28 +4,20 @@
   <listeners>
     <listener class-name="listener.CustomListener"/>
   </listeners>
-  <test thread-count="5" name="Test 1(failed)">
+  <test thread-count="5" name="Create Portfolio Test(failed)">
     <classes>
-      <class name="ff.tests.Session">
+      <class name="ff.tests.PortfolioManagement">
         <methods>
           <include name="beforeMethod"/>
-          <include name="doLogin"/>
           <include name="afterTest"/>
+          <include name="createPortfolio"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- ff.tests.Session -->
+      </class> <!-- ff.tests.PortfolioManagement -->
     </classes>
-  </test> <!-- Test 1(failed) -->
-  <test thread-count="5" name="Test 2(failed)">
+  </test> <!-- Create Portfolio Test(failed) -->
+  <test thread-count="5" name="Delete Portfolio Test(failed)">
     <classes>
-      <class name="ff.tests.Session">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="doLogin"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- ff.tests.Session -->
       <class name="ff.tests.PortfolioManagement">
         <methods>
           <include name="beforeMethod"/>
@@ -35,5 +27,5 @@
         </methods>
       </class> <!-- ff.tests.PortfolioManagement -->
     </classes>
-  </test> <!-- Test 2(failed) -->
+  </test> <!-- Delete Portfolio Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

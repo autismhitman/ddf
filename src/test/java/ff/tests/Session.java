@@ -1,5 +1,6 @@
 package ff.tests;
 
+import org.openqa.selenium.By;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
@@ -20,12 +21,10 @@ public class Session extends BaseTest {
 		//con.setAttribute("i", 100);
 		
 		System.out.println("login --->"+app.hashCode());
-		app.openBrowser("chrome");
-		app.navigate("url");
-		int i= 100/0;
-		app.type("username_id", "standard_user");
-		app.type("password_xpath", "secret_sauce");
-		app.reportFailure("Will ths stop", true);
+     	app.navigate("url");
+		app.type("username_id","sample.sharma");
+		app.type("password_id","sample.sharma");
+		app.clear("login_submit_id");
 	 
 	//	
 	}

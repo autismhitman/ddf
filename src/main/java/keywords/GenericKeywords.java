@@ -10,6 +10,8 @@ import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.TakesScreenshot;
@@ -22,6 +24,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.ProfilesIni;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
@@ -40,10 +43,9 @@ public class GenericKeywords {
 	public Properties envProp;
 	public ExtentTest test;
 	public SoftAssert sa;
-	
 
 	public WebDriver openBrowser(String browserName) {
-         log("Starting the borwser :" + browserName);
+		log("Starting the borwser :" + browserName);
 		if (browserName.equals("chrome")) {
 
 			ChromeOptions co = new ChromeOptions();
@@ -57,7 +59,7 @@ public class GenericKeywords {
 			options.add("--remote-allow-origins=*");
 			options.add("ignore-certificate-errors");
 			// options.add("--headless=new");
-			//options.add("unsafely-treat-insecure-origin-as-secure");
+			// options.add("unsafely-treat-insecure-origin-as-secure");
 			options.add("--incognito");
 			options.add("--disable-dev-shm-usage");
 			options.add("--disable-application-cache");
@@ -111,11 +113,23 @@ public class GenericKeywords {
 		log("Clicking on  " + locatorkey);
 		getElement(locatorkey).click();
 	}
+	
+	 public void clickEnterButton(String locatorkey) {
+		 
+		   log("Clicking on  " + locatorkey);
+		   getElement(locatorkey).sendKeys(Keys.ENTER);
+		}
 
 	public void type(String locatorkey, String data) {
 
 		log("Typing on  " + locatorkey + "data: " + data);
 		getElement(locatorkey).sendKeys(data);
+	}
+
+	public void clear(String locatorkey) {
+		log("Clearing text on " + locatorkey);
+		getElement(locatorkey).clear();
+		;
 	}
 
 	public void select(String locatorkey, String data) {
@@ -186,65 +200,163 @@ public class GenericKeywords {
 		By by = null;
 
 		if (locatorkey.endsWith("_id")) {
-          by=  By.id(prop.getProperty(locatorkey));
-		}
-		else if(locatorkey.endsWith("_xpath")) {
-          by=  By.xpath(prop.getProperty(locatorkey));
-		}
-		else if(locatorkey.endsWith("_css")) {
-			 by=   By.cssSelector(prop.getProperty(locatorkey));
-		}
-		else if(locatorkey.endsWith("_name")) {
-			 by=   By.name(prop.getProperty(locatorkey));
+			by = By.id(prop.getProperty(locatorkey));
+		} else if (locatorkey.endsWith("_xpath")) {
+			by = By.xpath(prop.getProperty(locatorkey));
+		} else if (locatorkey.endsWith("_css")) {
+			by = By.cssSelector(prop.getProperty(locatorkey));
+		} else if (locatorkey.endsWith("_name")) {
+			by = By.name(prop.getProperty(locatorkey));
 		}
 		return by;
 
 	}
-
+    
+	
+	public void selectByVisibleText(String locatorKey, String portfolioName) {
+		 
+		Select s = new Select(getElement(locatorKey));
+		s.selectByVisibleText(portfolioName);
+	}
+	
+	public void acceptAlert() {
+	 
+		test.log(Status.INFO, "Switching to alert");
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.alertIsPresent());
+		try{
+			driver.switchTo().alert().accept();
+			driver.switchTo().defaultContent();
+			test.log(Status.INFO, "Alert accepted successfully");
+		}catch(Exception e){
+				reportFailure("Alert not found when mandatory",true);
+		}
+	}
+	
 	public void quit() {
 
 		driver.quit();
 	}
-	
+
 	public void log(String msg) {
-		
+
 		test.log(Status.INFO, msg);
 	}
-	
+
 	public void reportFailure(String failMsg, boolean isCritical) {
-		
-		test.log(Status.FAIL,failMsg);
+
+		test.log(Status.FAIL, failMsg);
 		screenshot();
 		sa.fail(failMsg);
-		
-		if(isCritical) {
+
+		if (isCritical) {
 			Reporter.getCurrentTestResult().getTestContext().setAttribute("CriticalFailure", "Y");
 			assertAll();
 		}
 	}
-	
+
 	public void assertAll() {
-		
-		
+
 		sa.assertAll();
 	}
-	
-	public void screenshot()   {
-		 
-		 Date d  = new Date();
-		 String screenshotFile = d.toString().replaceAll(" ", "_").replaceAll(":", "_")+".png";
-		 File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		 
-		 try {
-			 
-			 FileUtils.copyFile(src, new File(ExtentManager.screenshotPath+"//"+screenshotFile));
-			 test.log(Status.INFO, "screenshot-> "+ test.addScreenCaptureFromPath(ExtentManager.screenshotPath+"//"+screenshotFile));
-		 }
-		 catch(IOException e) {
-			 
-			 e.printStackTrace();
-		 }
-		 
+
+	public void screenshot() {
+
+		Date d = new Date();
+		String screenshotFile = d.toString().replaceAll(" ", "_").replaceAll(":", "_") + ".png";
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		try {
+
+			FileUtils.copyFile(src, new File(ExtentManager.screenshotPath + "//" + screenshotFile));
+			test.log(Status.INFO, "screenshot-> "
+					+ test.addScreenCaptureFromPath(ExtentManager.screenshotPath + "//" + screenshotFile));
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+
 	}
 
+	public void waitForPageLoad() {
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		int i = 0;
+
+		while (i < 10) {
+
+			String state = (String) js.executeScript(" return document.readyState;");
+			System.out.println(state);
+			if (state.equals("complete"))
+				break;
+			else
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			i++;
+
+		}
+	/*	i = 0;
+
+		while (i < 10) {
+
+			Long d = (Long) js.executeScript(" return jquery.active;");
+			System.out.println(d);
+			if (d.longValue() == 0)
+				break;
+			else
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			i++;
+
+		}
+   */
+	}
+	
+	
+	public void wait(int time) {
+		try {
+			Thread.sleep(time*1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	 public int getRowNumWithCellData(String tableLocator, String data) {
+		 
+		 WebElement table = driver.findElement(getLocator(tableLocator));
+		 
+		 List<WebElement> rows = table.findElements(By.tagName("tr"));
+		 for( int rNum= 0; rNum<rows.size();rNum++) {
+			 
+			 WebElement row = rows.get(rNum);
+			 List<WebElement> cells = row.findElements(By.tagName("td"));
+			 for( int cNum = 0; cNum<cells.size(); cNum++) {
+				 
+				 WebElement cell = cells.get(cNum);
+				 System.out.println("Text " + cell.getText());
+				 
+				 if(!cell.getText().trim().equals(""))
+				    if(data.startsWith(cell.getText()))
+				    	return (rNum+1);
+				 
+			 }
+			 
+			 
+		 }
+		 
+		 
+		 return -1;
+	 }
+	
+	
+
+//
 }

@@ -35,7 +35,8 @@ public class BaseTest {
 		
 		test.log(Status.INFO, "Starting Test : "+ con.getCurrentXmlTest().getName() );
 		app.setReport(test);
-		
+		app.openBrowser("chrome");
+        app.defaultLogin();
 		
 	}     
 	
@@ -60,7 +61,7 @@ public class BaseTest {
 	
 	
 	
-	@AfterTest
+	@AfterTest(alwaysRun=true)
 	public void afterTest() {
 		
 		
