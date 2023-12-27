@@ -70,4 +70,29 @@
 		</dependency>
 	 
 	 </dependencies>
+	 
+	 <build>
+	 <pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+         		 <artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.3</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>src/test/resources/pm.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/stocks.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					<properties>
+						<property>
+							<name>suitethreadpoolsize</name>
+							<value>2</value>
+						</property>
+					</properties>
+				</configuration>
+			</plugin>
+		</plugins>
+	</pluginManagement>
+	</build>
+	 
 	</project>

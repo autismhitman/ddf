@@ -67,7 +67,7 @@ public class ApplicationKeywords extends ValidationKeywords{
 			return 0;
 		}
 		
-		String quantity = driver.findElement(By.cssSelector(prop.getProperty("table_stock_css")+" tr:nth-child("+row+") > td:nth-child(4)")).getText();
+		String quantity = driver.findElement(By.cssSelector(prop.getProperty("table_stock_css")+" > tr:nth-child("+row+") > td:nth-child(4)")).getText();
 		log("current stock quantiry " + quantity);
 		
 		return Integer.parseInt(quantity);
@@ -88,14 +88,11 @@ public class ApplicationKeywords extends ValidationKeywords{
 		    while(!monthYearToBeselected.equals(monthYearDisplayed)) {
 		    	
 		    	click("datefwdbutton_xpath");
+		    	monthYearDisplayed=getElement("monthyear_css").getText();
 		    }
 		    
 		    driver.findElement(By.xpath("//td[text()='"+day+"']")).click();
-		 
-		 
-		 
-		 
-		 
+	 
 			} catch (ParseException e) {
 		 
 				e.printStackTrace();
@@ -103,7 +100,28 @@ public class ApplicationKeywords extends ValidationKeywords{
 		
 	}
 
-	
+	public void goToTransactionHistory(String companyName) {
+		  log("Selecting the company row "+companyName );
+			int row = getRowNumWithCellData("table_stock_css", companyName);
+			if(row==-1) {
+				log("Stock not present in list");
+				// report failure
+			}
+			driver.findElement(By.cssSelector(prop.getProperty("table_stock_css")+" > tr:nth-child("+row+") >td:nth-child(1)")).click();
+			driver.findElement(By.cssSelector(prop.getProperty("table_stock_css")+"  tr:nth-child("+row+") input.equityTransaction" )).click();
+		
+	}
+
+	public void goToBuySell(String companyName) {
+		log("Selecting the company row "+companyName );
+		int row = getRowNumWithCellData("stocktable_css", companyName);
+		if(row==-1) {
+			log("Stock not present in list");
+		}
+		driver.findElement(By.cssSelector(prop.getProperty("table_stock_css")+" > tr:nth-child("+row+") >td:nth-child(1)")).click();
+		driver.findElement(By.cssSelector(prop.getProperty("table_stock_css")+"  tr:nth-child("+row+") input.buySell" )).click();
+		
+	}
 	
 
 	

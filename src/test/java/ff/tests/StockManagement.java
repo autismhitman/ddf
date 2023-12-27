@@ -12,7 +12,7 @@ public class StockManagement extends BaseTest {
 	@Test
 	public void addNewStock(ITestContext con) {
 	   
-		String companyName="Birla Corporation Ltd.";
+		String companyName="Birla Corporation Ltd";
 		String selectionDate ="26-01-2024";
 		String stockQuantity="100";
 		String stockPrice="200";
@@ -42,7 +42,7 @@ public class StockManagement extends BaseTest {
 	@Test
 	public void verifyStockPresent() {
  
-		String companyName="Birla Corporation Ltd.";
+		String companyName="Birla Corporation Ltd";
 		int row =app.getRowNumWithCellData("table_stock_css", companyName);
 		if(row==-1)
 			app.reportFailure("Stock Not present" + companyName, true);
@@ -55,7 +55,7 @@ public class StockManagement extends BaseTest {
 	public void verifyStockQuantity(ITestContext con, String action) {
 		
 	 
-		String companyName="Birla Corporation Ltd.";
+		String companyName="Birla Corporation Ltd";
 		String selectionDate ="26-01-2024";
 		String stockQuantity="100";
 		String stockPrice="200";
@@ -63,19 +63,19 @@ public class StockManagement extends BaseTest {
 		
 		app.log("Verifying stock quantity after action - "+ action);
 		// quantity after adding/selling stocks
-		int quatityAfterModification = app.findCurrentStockQuantity(companyName);
+		int quantityAfterModification = app.findCurrentStockQuantity(companyName);
 		int modifiedquantity=Integer.parseInt(stockQuantity);
 		int expectedModifiedQuantity=0;
 		
 		// quantity before adding/selling stocks
-		int quatityBeforeModification = (Integer)con.getAttribute("quatityBeforeModification");
+		int quantityBeforeModification = (Integer)con.getAttribute("quantityBeforeModification");
 		if(action.equals("addstock"))
-			expectedModifiedQuantity = quatityAfterModification-quatityBeforeModification;
+			expectedModifiedQuantity = quantityAfterModification-quantityBeforeModification;
 		else if(action.equals("sellstock"))
-			expectedModifiedQuantity = quatityBeforeModification-quatityAfterModification;
+			expectedModifiedQuantity = quantityBeforeModification-quantityAfterModification;
 		
-		app.log("Old Stock Quantity "+quatityBeforeModification);
-		app.log("New Stock Quantity "+quatityAfterModification);
+		app.log("Old Stock Quantity "+quantityBeforeModification);
+		app.log("New Stock Quantity "+quantityAfterModification);
 		
 		if(modifiedquantity != expectedModifiedQuantity)
 		    app.reportFailure("Quantity did not match", true);
@@ -85,9 +85,9 @@ public class StockManagement extends BaseTest {
 	
 	@Parameters({"action"})
 	@Test
-	public void verifyTrasactionHistory(String action)) {
+	public void verifyTrasactionHistory(String action) {
 		
-		String companyName="Birla Corporation Ltd.";
+		String companyName="Birla Corporation Ltd";
 		String selectionDate ="26-01-2024";
 		String stockQuantity="100";
 		String stockPrice="200";

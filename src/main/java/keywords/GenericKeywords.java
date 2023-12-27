@@ -138,10 +138,11 @@ public class GenericKeywords {
 		getElement(locatorkey).sendKeys(data);
 	}
 
-	public void getText(String locatorkey) {
-
-		log("Getting the text of the element " + locatorkey);
-		getElement(locatorkey).getText();
+ 
+	
+	public String getText(String locatorKey) {
+		log("Getting the text of the element " + locatorKey);
+		return getElement(locatorKey).getText();
 	}
 
 	public WebElement getElement(String locatorkey) {
@@ -280,51 +281,41 @@ public class GenericKeywords {
 
 	public void waitForPageLoad() {
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		int i = 0;
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		int i=0;
+		// ajax status
+		while(i!=10){
+		String state = (String)js.executeScript("return document.readyState;");
+		System.out.println(state);
 
-		while (i < 10) {
+		if(state.equals("complete"))
+			break;
+		else
+			wait(2);
 
-			String state = (String) js.executeScript(" return document.readyState;");
-			System.out.println(state);
-			if (state.equals("complete"))
-				break;
-			else
-				try {
-					Thread.sleep(2000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			i++;
-
+		i++;
 		}
-	/*	i = 0;
-
-		while (i < 10) {
-
-			Long d = (Long) js.executeScript(" return jquery.active;");
-			System.out.println(d);
-			if (d.longValue() == 0)
-				break;
-			else
-				try {
-					Thread.sleep(2000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			i++;
-
-		}
-   */
-	}
+		// check for jquery status
+		i=0;
+		while(i!=10){
 	
+			Long d= (Long) js.executeScript("return jQuery.active;");
+			System.out.println(d);
+			if(d.longValue() == 0 )
+			 	break;
+			else
+				 wait(2);
+			 i++;
+				
+			}
+		
+		}
 	
 	public void wait(int time) {
 		try {
 			Thread.sleep(time*1000);
 		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

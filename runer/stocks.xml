@@ -11,7 +11,7 @@
   <test  name="Add New Stock Test">
     <parameter  name="action" value="addstock" />  
     <classes>
-         <class name="ff.tests.StockManagement">
+         <class name="ff.tests.PortfolioManagement">
           <methods>  
                <include name= "selectPortfolio"/>
          	</methods>  

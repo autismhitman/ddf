@@ -4,28 +4,17 @@
   <listeners>
     <listener class-name="listener.CustomListener"/>
   </listeners>
-  <test thread-count="5" name="Create Portfolio Test(failed)">
+  <test thread-count="5" name="Add New Stock Test(failed)">
+    <parameter name="action" value="addstock"/>
     <classes>
-      <class name="ff.tests.PortfolioManagement">
+      <class name="ff.tests.StockManagement">
         <methods>
           <include name="beforeMethod"/>
           <include name="afterTest"/>
-          <include name="createPortfolio"/>
           <include name="beforeTest"/>
+          <include name="verifyTrasactionHistory" invocation-numbers="0"/>
         </methods>
-      </class> <!-- ff.tests.PortfolioManagement -->
+      </class> <!-- ff.tests.StockManagement -->
     </classes>
-  </test> <!-- Create Portfolio Test(failed) -->
-  <test thread-count="5" name="Delete Portfolio Test(failed)">
-    <classes>
-      <class name="ff.tests.PortfolioManagement">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="afterTest"/>
-          <include name="deletePortfolio"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- ff.tests.PortfolioManagement -->
-    </classes>
-  </test> <!-- Delete Portfolio Test(failed) -->
+  </test> <!-- Add New Stock Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
