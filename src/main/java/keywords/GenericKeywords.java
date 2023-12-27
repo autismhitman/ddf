@@ -2,6 +2,7 @@ package keywords;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
@@ -23,12 +24,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.ProfilesIni;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
-
+import org.openqa.selenium.remote.RemoteWebDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -46,7 +48,36 @@ public class GenericKeywords {
 
 	public WebDriver openBrowser(String browserName) {
 		log("Starting the borwser :" + browserName);
-		if (browserName.equals("chrome")) {
+		
+		if(prop.get("grid_run").equals("Y")) {
+			
+			DesiredCapabilities cap=new DesiredCapabilities();
+			if(browserName.equals("Mozilla")){
+				
+				cap.setBrowserName("firefox");
+				cap.setPlatform(org.openqa.selenium.Platform.WINDOWS);
+				
+			}else if(browserName.equals("chrome")){
+				 cap.setBrowserName("chrome");
+				 cap.setPlatform(org.openqa.selenium.Platform.WINDOWS);
+			}
+			
+			try {
+				// hit the hub
+				driver = new RemoteWebDriver(new URL("http://localhost:4444"), cap);
+				  
+			} catch (Exception e) {
+			  e.printStackTrace();
+			}
+			
+		}
+		
+		
+		
+		else {
+			
+			if (browserName.equals("chrome")) {
+		 
 
 			ChromeOptions co = new ChromeOptions();
 			co.setPageLoadStrategy(PageLoadStrategy.NORMAL);
@@ -73,7 +104,7 @@ public class GenericKeywords {
 
 		else if (browserName.equals("ff")) {
 
-			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, ".\\logs\\flog.log");
+			//System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, ".\\logs\\flog.log");
 
 			FirefoxOptions ops = new FirefoxOptions();
 
@@ -95,8 +126,8 @@ public class GenericKeywords {
 
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver(ops);
+			}
 		}
-
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
 		return driver;

@@ -36,11 +36,12 @@ public class PortfolioManagement extends BaseTest {
 		 test.log(Status.INFO, "delete Portfolio" );
 		 System.out.println("delete Portfolio--->" + app.hashCode());
 		 System.out.println("delete Portfolio");
-	     String portfolioName= "2";
+	     String portfolioName= "sam1";
 		 app.selectByVisibleText("portfolio_ddl_css",portfolioName);
 		 app.waitForPageLoad();
 		 app.click("delete_portfolio_css");
 		 app.acceptAlert();
+		 app.waitForPageLoad();
 		 app.validateSelectedValueNotInDropDown("portfolio_ddl_css", portfolioName);
  	
 	}

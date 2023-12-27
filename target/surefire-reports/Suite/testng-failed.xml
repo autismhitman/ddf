@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="listener.CustomListener"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Create Portfolio Test(failed)" verbose="0">
+    <classes>
+      <class name="ff.tests.PortfolioManagement">
+        <methods>
+          <include name="createPortfolio"/>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- ff.tests.PortfolioManagement -->
+    </classes>
+  </test> <!-- Create Portfolio Test(failed) -->
+  <test thread-count="5" parallel="tests" name="Delete Portfolio Test(failed)" verbose="0">
+    <classes>
+      <class name="ff.tests.PortfolioManagement">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
+          <include name="deletePortfolio"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- ff.tests.PortfolioManagement -->
+    </classes>
+  </test> <!-- Delete Portfolio Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

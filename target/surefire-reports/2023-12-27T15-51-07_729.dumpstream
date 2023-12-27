@@ -1,0 +1,5 @@
+# Created at 2023-12-27T15:51:10.416
+Boot Manifest-JAR contains absolute paths in classpath 'E:\Navin\vins\Framework1\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

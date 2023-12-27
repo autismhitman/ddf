@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite (0)]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="listener.CustomListener"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Add New Stock Test(failed)" verbose="0">
+    <parameter name="action" value="addstock"/>
+    <classes>
+      <class name="ff.tests.StockManagement">
+        <methods>
+          <include name="verifyStockQuantity"/>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
+          <include name="verifyStockPresent"/>
+          <include name="addNewStock"/>
+          <include name="verifyTrasactionHistory"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- ff.tests.StockManagement -->
+      <class name="ff.tests.PortfolioManagement">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="selectPortfolio"/>
+        </methods>
+      </class> <!-- ff.tests.PortfolioManagement -->
+    </classes>
+  </test> <!-- Add New Stock Test(failed) -->
+</suite> <!-- Failed suite [Suite (0)] -->

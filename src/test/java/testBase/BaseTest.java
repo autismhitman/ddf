@@ -62,8 +62,14 @@ public class BaseTest {
 	
 	
 	@AfterTest(alwaysRun=true)
-	public void afterTest() {
+	public void afterTest(ITestContext con) {
 		
+		app =(ApplicationKeywords) con.getAttribute("app");
+		
+		if(app!=null)
+             app.quit();
+		
+		rep = (ExtentReports)con.getAttribute("report");
 		
 		if(rep!=null)
 		   rep.flush();

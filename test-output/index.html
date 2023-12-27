@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="ff.tests.StockManagement" class="method navigator-link" hash-for-method="addNewStock(org.testng.TestRunner@6192a5d5)">addNewStock(org.testng.TestRunner@6192a5d5)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="ff.tests.StockManagement" class="method navigator-link" hash-for-method="addNewStock(org.testng.TestRunner@61c1dd37)">addNewStock(org.testng.TestRunner@61c1dd37)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -118,7 +118,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="ff.tests.StockManagement" class="method navigator-link" hash-for-method="verifyStockQuantity(org.testng.TestRunner@6192a5d5, addstock)">verifyStockQuantity(org.testng.TestRunner@6192a5d5, addstock)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="ff.tests.StockManagement" class="method navigator-link" hash-for-method="verifyStockQuantity(org.testng.TestRunner@61c1dd37, addstock)">verifyStockQuantity(org.testng.TestRunner@61c1dd37, addstock)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -161,10 +161,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addNewStock(org.testng.TestRunner@6192a5d5)">
-                  </a> <!-- addNewStock(org.testng.TestRunner@6192a5d5) -->
+                  <a name="addNewStock(org.testng.TestRunner@61c1dd37)">
+                  </a> <!-- addNewStock(org.testng.TestRunner@61c1dd37) -->
                   <span class="method-name">addNewStock</span>
-                  <span class="parameters">(org.testng.TestRunner@6192a5d5)</span>
+                  <span class="parameters">(org.testng.TestRunner@61c1dd37)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -176,10 +176,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyStockQuantity(org.testng.TestRunner@6192a5d5, addstock)">
-                  </a> <!-- verifyStockQuantity(org.testng.TestRunner@6192a5d5, addstock) -->
+                  <a name="verifyStockQuantity(org.testng.TestRunner@61c1dd37, addstock)">
+                  </a> <!-- verifyStockQuantity(org.testng.TestRunner@61c1dd37, addstock) -->
                   <span class="method-name">verifyStockQuantity</span>
-                  <span class="parameters">(org.testng.TestRunner@6192a5d5,addstock)</span>
+                  <span class="parameters">(org.testng.TestRunner@61c1dd37,addstock)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -201,11 +201,11 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;listener.CustomListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Add New Stock Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Add New Stock Test&quot;&gt;
     &lt;parameter name=&quot;action&quot; value=&quot;addstock&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;ff.tests.PortfolioManagement&quot;&gt;
@@ -264,28 +264,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'addNewStock')
 data.setCell(0, 2, 'ff.tests.StockManagement')
-data.setCell(0, 3, 6077);
+data.setCell(0, 3, 10000);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'selectPortfolio')
-data.setCell(1, 2, 'ff.tests.PortfolioManagement')
-data.setCell(1, 3, 1664);
+data.setCell(1, 1, 'verifyTrasactionHistory')
+data.setCell(1, 2, 'ff.tests.StockManagement')
+data.setCell(1, 3, 3332);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyTrasactionHistory')
-data.setCell(2, 2, 'ff.tests.StockManagement')
-data.setCell(2, 3, 909);
+data.setCell(2, 1, 'selectPortfolio')
+data.setCell(2, 2, 'ff.tests.PortfolioManagement')
+data.setCell(2, 3, 2755);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyStockPresent')
+data.setCell(3, 1, 'verifyStockQuantity')
 data.setCell(3, 2, 'ff.tests.StockManagement')
-data.setCell(3, 3, 295);
+data.setCell(3, 3, 263);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyStockQuantity')
+data.setCell(4, 1, 'verifyStockPresent')
 data.setCell(4, 2, 'ff.tests.StockManagement')
-data.setCell(4, 3, 244);
+data.setCell(4, 3, 207);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 40 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -331,58 +331,58 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">ff.tests.PortfolioManagement</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">beforeTest(org.testng.TestRunner@6192a5d5)</span>
+                <span class="method-name">beforeTest(org.testng.TestRunner@61c1dd37)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(org.testng.TestRunner@6192a5d5)</span>
-                <span class="method-start">12613 ms</span>
+                <span class="method-name">beforeMethod(org.testng.TestRunner@61c1dd37)</span>
+                <span class="method-start">20189 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">selectPortfolio</span>
-                <span class="method-start">12616 ms</span>
+                <span class="method-start">20193 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ff.tests.StockManagement</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(org.testng.TestRunner@6192a5d5)</span>
-                <span class="method-start">14292 ms</span>
+                <span class="method-name">beforeMethod(org.testng.TestRunner@61c1dd37)</span>
+                <span class="method-start">22957 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">addNewStock(org.testng.TestRunner@6192a5d5)</span>
-                <span class="method-start">14293 ms</span>
+                <span class="method-name">addNewStock(org.testng.TestRunner@61c1dd37)</span>
+                <span class="method-start">22958 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(org.testng.TestRunner@6192a5d5)</span>
-                <span class="method-start">20376 ms</span>
+                <span class="method-name">beforeMethod(org.testng.TestRunner@61c1dd37)</span>
+                <span class="method-start">32964 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyStockPresent</span>
-                <span class="method-start">20378 ms</span>
+                <span class="method-start">32966 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(org.testng.TestRunner@6192a5d5)</span>
-                <span class="method-start">20680 ms</span>
+                <span class="method-name">beforeMethod(org.testng.TestRunner@61c1dd37)</span>
+                <span class="method-start">33181 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyStockQuantity(org.testng.TestRunner@6192a5d5, addstock)</span>
-                <span class="method-start">20681 ms</span>
+                <span class="method-name">verifyStockQuantity(org.testng.TestRunner@61c1dd37, addstock)</span>
+                <span class="method-start">33183 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(org.testng.TestRunner@6192a5d5)</span>
-                <span class="method-start">20930 ms</span>
+                <span class="method-name">beforeMethod(org.testng.TestRunner@61c1dd37)</span>
+                <span class="method-start">33455 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyTrasactionHistory(addstock)</span>
-                <span class="method-start">20935 ms</span>
+                <span class="method-start">33457 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ff.tests.PortfolioManagement</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">21847 ms</span>
+                <span class="method-start">36799 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
