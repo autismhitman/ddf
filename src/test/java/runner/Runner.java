@@ -9,11 +9,11 @@ public class Runner {
 	public static void main(String[] args) {
 		
 		
-		CustomTestNGRunner testRun = new CustomTestNGRunner(1);
+		TestNGRunner testRun = new TestNGRunner(1);
 		testRun.createSuite("Suite Stocks", false);
 		testRun.addListener("listener.CustomListener");
 		testRun.addTest("Add New Stock Test");
-		testRun.addTestParam("action", "addstock" );
+		//testRun.addTestParam("action", "addstock" );
 		List<String> includedMethodNames = new ArrayList<>();
 		      includedMethodNames.add("selectPortfolio");
 		testRun.addTestClass("ff.tests.PortfolioManagement",includedMethodNames );

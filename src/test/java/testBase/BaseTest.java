@@ -69,7 +69,7 @@ public class BaseTest {
 		if(app!=null)
              app.quit();
 		
-		rep = (ExtentReports)con.getAttribute("report");
+		rep = (ExtentReports)con.getAttribute("rep");
 		
 		if(rep!=null)
 		   rep.flush();
