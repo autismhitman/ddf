@@ -89,7 +89,7 @@ public class CustomTestNGRunner {
 	}
 	
 	public void addListener(String listenerFile) {
-		suite.addListener("listener.CustomListener");
+		suite.addListener(listenerFile);
 	}
 	
 	public void run() {

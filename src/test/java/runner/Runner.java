@@ -6,14 +6,32 @@ import java.util.List;
 public class Runner {
 	
 	
-	CustomTestNGRunner testRun = new CustomTestNGRunner(1);
+	public static void main(String[] args) {
+		
+		
+		CustomTestNGRunner testRun = new CustomTestNGRunner(1);
+		testRun.createSuite("Suite Stocks", false);
+		testRun.addListener("listener.CustomListener");
+		testRun.addTest("Add New Stock Test");
+		testRun.addTestParam("action", "addstock" );
+		List<String> includedMethodNames = new ArrayList<>();
+		      includedMethodNames.add("selectPortfolio");
+		testRun.addTestClass("ff.tests.PortfolioManagement",includedMethodNames );
+		
+		List<String> includedMethodNames1 = new ArrayList<>();
+	      includedMethodNames1.add("addNewStock");
+	      includedMethodNames1.add("verifyStockPresent");
+	      includedMethodNames1.add("verifyStockQuantity");
+	      includedMethodNames1.add("verifyTrasactionHistory");
+		testRun.addTestClass("ff.tests.StockManagement",includedMethodNames1 );
+		
+		testRun.run();
+		
+		
+		
+		
+	}
 	
-	
-	
-	
-	
-	 
-
 
 }
 

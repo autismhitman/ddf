@@ -1,0 +1,15 @@
+{
+     
+	"classdetails":[
+		{
+		 "class":"ff.tests.PortfolioManagement",
+		 "methods":["createPortfolio","deletePortfolio","selectPortfolio"]
+		},
+		{
+		 "class":"ff.tests.StockManagement",
+		 "methods":["addNewStock","verifyStockPresent","verifyStockQuantity","verifyTrasactionHistory"]
+		}
+		
+		
+	]
+}

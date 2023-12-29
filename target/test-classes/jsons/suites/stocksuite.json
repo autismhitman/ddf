@@ -1,0 +1,18 @@
+{
+   "suitename":"Stock Suite",
+   "testcases":[
+    {
+       "name":"Add New Stock",
+       "parameternames":["action"],
+        "executions":[
+          {
+            "runmode":"Y",
+		      "executionname":"New Stock",
+		      "dataflag":"addfreshstock",
+		      "parametervalues":["addstock"],
+		      "methods":["selectPortFolio","addNewStock","verifyStockPresent","verifyStockQuantity","verifyTransactionHistory"]
+		   }
+        ]
+    }
+   ]
+}
