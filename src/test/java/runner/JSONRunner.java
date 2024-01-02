@@ -56,19 +56,27 @@ public class JSONRunner {
 					 
 					 for ( int eId= 0; eId< executions.size(); eId++) {
 						 JSONObject execution  =  (JSONObject) executions.get(eId);
-						// String runmodeTC = (String) execution.get("runmode");
-						 String executionname = (String) execution.get("executionname");
-						 String dataflag = (String) execution.get("dataflag");
-						 JSONArray parametervalues = ( JSONArray) execution.get("parametervalues");
-						 JSONArray methods = (JSONArray) execution.get("methods");
-						 
-						 System.out.println(testName +"--"+ executionname +"====="+parameterName+"===" + parametervalues);
-						 testRun.addTest(testName +"-" +executionname); //4
-					 	 
+						 String tcRunMode= (String) execution.get("runmode");
+						 if(tcRunMode !=null && tcRunMode.equals("Y")) {
+						
+								 String executionname = (String) execution.get("executionname");
+								 String dataflag = (String) execution.get("dataflag");
+							////
+								 int dataSets =new DataUtil().getTestDataSets((System.getProperty("user.dir")+"\\src\\test\\resources\\jsons\\"+testdatajsonfile), dataflag);
+								 for( int dSId = 0; dSId< dataSets;dSId++) {
+								 JSONArray parametervalues = ( JSONArray) execution.get("parametervalues");
+								 JSONArray methods = (JSONArray) execution.get("methods");
+								 
+								 System.out.println(testName +"--"+ executionname +"====="+parameterName+"===" + parametervalues);
+								 testRun.addTest(testName +"-" +executionname+"Iteration-"+ dSId); //4
+							 	 
 						 for( int pid= 0; pid <parameterName.size(); pid++) {
 							 testRun.addTestParameter((String)parameterName.get(pid), (String)parametervalues.get(pid) );//5
 						 }
-						 
+						    testRun.addTestParameter("dataflag", dataflag);
+						    testRun.addTestParameter("datafilePath", (System.getProperty("user.dir")+"\\src\\test\\resources\\jsons\\"+testdatajsonfile));
+						    testRun.addTestParameter("iteration", String.valueOf(dSId));
+						    
 							List<String> includedMethods = new ArrayList<String>();;
 							 
 							 for(int mId=0;mId<methods.size();mId++) {
@@ -87,10 +95,10 @@ public class JSONRunner {
 							 }
 	
 							System.out.println("-----------------------------"); 
-					  
+				       }
 		            }
-            	 }
-				
+            	  }
+				}
 			testRun.run();//7
 			
 			}

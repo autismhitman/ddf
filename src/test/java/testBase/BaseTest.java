@@ -1,5 +1,10 @@
 package testBase;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 import org.testng.ITestContext;
 import org.testng.SkipException;
 import org.testng.annotations.AfterTest;
@@ -13,6 +18,7 @@ import com.aventstack.extentreports.Status;
 
 import keywords.ApplicationKeywords;
 import reports.ExtentManager;
+import runner.DataUtil;
 
 public class BaseTest {
 	
@@ -22,21 +28,39 @@ public class BaseTest {
 	public ExtentTest test;
 	
 	@BeforeTest(alwaysRun=true)
-	public void beforeTest(ITestContext con) {
+	public void beforeTest(ITestContext con) throws NumberFormatException, FileNotFoundException, IOException, ParseException {
 		System.out.println("---------B4 test--------");
-		 
-		app = new ApplicationKeywords();
-		con.setAttribute("app", app);
 		
+		String dataFlag = con.getCurrentXmlTest().getParameter("dataflag");
+		String datafilePath = con.getCurrentXmlTest().getParameter("datafilePath");
+		String iteration = con.getCurrentXmlTest().getParameter("iteration");
+		JSONObject data =new DataUtil().getTestData(datafilePath, dataFlag, Integer.parseInt(iteration));
+		
+		con.setAttribute("data", data);
+		
+		String runmode = (String)data.get("runmode");
+		
+		
+		
+		System.out.println(dataFlag);
 		rep = ExtentManager.getReports();
-		con.setAttribute("rep", rep);
 		test = rep.createTest(con.getCurrentXmlTest().getName());
+		test.log(Status.INFO, "Starting Test : "+ con.getCurrentXmlTest().getName() );
+ 		con.setAttribute("rep", rep);
 		con.setAttribute("test", test);
 		
-		test.log(Status.INFO, "Starting Test : "+ con.getCurrentXmlTest().getName() );
+		  if(!runmode.equals("Y")) {
+	        	test.log(Status.SKIP, "Skipping as Data Runmode is N");
+	        	throw new SkipException("Skipping as Data Runmode is N");
+			}
+		
+		app = new ApplicationKeywords();
 		app.setReport(test);
 		app.openBrowser("chrome");
         app.defaultLogin();
+		con.setAttribute("app", app);
+		
+	
 		
 	}     
 	

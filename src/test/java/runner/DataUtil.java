@@ -40,5 +40,47 @@ public class DataUtil {
 		return classMethodMap;
 
 	}
+	
+	
+	public int getTestDataSets(String pathFile, String dataFlag) throws FileNotFoundException, IOException, ParseException {
+		
+		JSONParser parser = new JSONParser();
+		JSONObject json=(JSONObject)parser.parse(new FileReader(new File(pathFile)));
+		JSONArray testDataSets = (JSONArray)json.get("testdata");
+		for( int tData=0; tData< testDataSets.size() ; tData++) {
+			
+			JSONObject  testData=  (JSONObject ) testDataSets.get(tData);
+			String flag = (String) testData.get("flag");
+			if (dataFlag.equals(flag)) {
+				
+				JSONArray dataSets = (JSONArray)testData.get("data");
+				return dataSets.size();
+			}
+			
+			
+		}
+		
+		return -1;
+	}
+
+
+	public JSONObject getTestData(String datafilePath, String dataFlag, int iteration) throws FileNotFoundException, IOException, ParseException {
+		JSONParser parser = new JSONParser();
+		JSONObject json=(JSONObject)parser.parse(new FileReader(new File( datafilePath)));
+		JSONArray testDataSets = (JSONArray)json.get("testdata");
+		for( int tData=0; tData< testDataSets.size() ; tData++) {
+			
+			JSONObject  testData=  (JSONObject ) testDataSets.get(tData);
+			String flag = (String) testData.get("flag");
+			if (dataFlag.equals(flag)) {
+				
+				JSONArray dataSets = (JSONArray)testData.get("data");
+				return (JSONObject)dataSets.get(iteration);
+			}
+
+		}
+		
+		return null;
+	}
 
 }

@@ -1,65 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="5" failed="0" skipped="5">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-02T12:59:33 IST" name="Stock Suite" finished-at="2024-01-02T13:00:18 IST" duration-ms="45156">
+  <suite started-at="2024-01-02T16:42:54 IST" name="Stock Suite" finished-at="2024-01-02T16:43:17 IST" duration-ms="23320">
     <groups>
     </groups>
-    <test started-at="2024-01-02T12:59:33 IST" name="Add New Stock-New Stock" finished-at="2024-01-02T13:00:18 IST" duration-ms="45156">
+    <test started-at="2024-01-02T16:42:54 IST" name="Add New Stock-New StockIteration-0" finished-at="2024-01-02T16:43:17 IST" duration-ms="23208">
       <class name="ff.tests.StockManagement">
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:08 IST" name="beforeMethod" finished-at="2024-01-02T13:00:08 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@11e21d0e]" started-at="2024-01-02T16:43:08 IST" name="beforeMethod" finished-at="2024-01-02T16:43:08 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
+                <![CDATA[org.testng.TestRunner@5f631ca0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="addNewStock(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:08 IST" name="addNewStock" finished-at="2024-01-02T13:00:15 IST" duration-ms="6224" status="PASS">
+        <test-method signature="addNewStock(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@11e21d0e]" started-at="2024-01-02T16:43:08 IST" name="addNewStock" finished-at="2024-01-02T16:43:14 IST" duration-ms="5116" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
+                <![CDATA[org.testng.TestRunner@5f631ca0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewStock -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:15 IST" name="beforeMethod" finished-at="2024-01-02T13:00:15 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@11e21d0e]" started-at="2024-01-02T16:43:14 IST" name="beforeMethod" finished-at="2024-01-02T16:43:14 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
+                <![CDATA[org.testng.TestRunner@5f631ca0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyStockPresent()[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:15 IST" name="verifyStockPresent" finished-at="2024-01-02T13:00:15 IST" duration-ms="331" status="PASS">
+        <test-method signature="verifyStockPresent(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@11e21d0e]" started-at="2024-01-02T16:43:14 IST" name="verifyStockPresent" finished-at="2024-01-02T16:43:14 IST" duration-ms="713" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5f631ca0]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyStockPresent -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:15 IST" name="beforeMethod" finished-at="2024-01-02T13:00:15 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@11e21d0e]" started-at="2024-01-02T16:43:14 IST" name="beforeMethod" finished-at="2024-01-02T16:43:14 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
+                <![CDATA[org.testng.TestRunner@5f631ca0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyStockQuantity(org.testng.ITestContext,java.lang.String)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:15 IST" name="verifyStockQuantity" finished-at="2024-01-02T13:00:15 IST" duration-ms="416" status="PASS">
+        <test-method signature="verifyStockQuantity(org.testng.ITestContext,java.lang.String)[pri:0, instance:ff.tests.StockManagement@11e21d0e]" started-at="2024-01-02T16:43:14 IST" name="verifyStockQuantity" finished-at="2024-01-02T16:43:15 IST" duration-ms="293" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
+                <![CDATA[org.testng.TestRunner@5f631ca0]]>
               </value>
             </param>
             <param index="1">
@@ -71,9 +78,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyStockQuantity -->
-        <test-method signature="verifyTransactionHistory(java.lang.String)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:15 IST" name="verifyTransactionHistory" finished-at="2024-01-02T13:00:17 IST" duration-ms="1230" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@11e21d0e]" started-at="2024-01-02T16:43:15 IST" name="beforeMethod" finished-at="2024-01-02T16:43:15 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5f631ca0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyTransactionHistory(org.testng.ITestContext,java.lang.String)[pri:0, instance:ff.tests.StockManagement@11e21d0e]" started-at="2024-01-02T16:43:15 IST" name="verifyTransactionHistory" finished-at="2024-01-02T16:43:16 IST" duration-ms="940" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5f631ca0]]>
+              </value>
+            </param>
+            <param index="1">
               <value>
                 <![CDATA[addstock]]>
               </value>
@@ -82,50 +105,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTransactionHistory -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:15 IST" name="beforeMethod" finished-at="2024-01-02T13:00:15 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
       </class> <!-- ff.tests.StockManagement -->
       <class name="ff.tests.PortfolioManagement">
-        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@701fc37a]" started-at="2024-01-02T12:59:33 IST" name="beforeTest" finished-at="2024-01-02T13:00:08 IST" duration-ms="34660" status="PASS">
+        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@4148db48]" started-at="2024-01-02T16:42:54 IST" name="beforeTest" finished-at="2024-01-02T16:43:08 IST" duration-ms="14422" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
+                <![CDATA[org.testng.TestRunner@5f631ca0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@701fc37a]" started-at="2024-01-02T13:00:08 IST" name="beforeMethod" finished-at="2024-01-02T13:00:08 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@4148db48]" started-at="2024-01-02T16:43:08 IST" name="beforeMethod" finished-at="2024-01-02T16:43:08 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
+                <![CDATA[org.testng.TestRunner@5f631ca0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="selectPortfolio()[pri:0, instance:ff.tests.PortfolioManagement@701fc37a]" started-at="2024-01-02T13:00:08 IST" name="selectPortfolio" finished-at="2024-01-02T13:00:08 IST" duration-ms="495" status="PASS">
+        <test-method signature="selectPortfolio()[pri:0, instance:ff.tests.PortfolioManagement@4148db48]" started-at="2024-01-02T16:43:08 IST" name="selectPortfolio" finished-at="2024-01-02T16:43:08 IST" duration-ms="385" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectPortfolio -->
-        <test-method is-config="true" signature="afterTest(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@701fc37a]" started-at="2024-01-02T13:00:17 IST" name="afterTest" finished-at="2024-01-02T13:00:18 IST" duration-ms="1710" status="PASS">
+        <test-method is-config="true" signature="afterTest(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@4148db48]" started-at="2024-01-02T16:43:16 IST" name="afterTest" finished-at="2024-01-02T16:43:17 IST" duration-ms="1238" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
+                <![CDATA[org.testng.TestRunner@5f631ca0]]>
               </value>
             </param>
           </params>
@@ -133,6 +145,333 @@
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- ff.tests.PortfolioManagement -->
-    </test> <!-- Add New Stock-New Stock -->
+    </test> <!-- Add New Stock-New StockIteration-0 -->
+    <test started-at="2024-01-02T16:43:17 IST" name="Add New Stock-New StockIteration-1" finished-at="2024-01-02T16:43:17 IST" duration-ms="72">
+      <class name="ff.tests.StockManagement">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@6b53e23f]" started-at="2024-01-02T16:43:17 IST" name="beforeMethod" finished-at="2024-01-02T16:43:17 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@d08edc5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="addNewStock(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@6b53e23f]" started-at="2024-01-02T16:43:17 IST" name="addNewStock" finished-at="2024-01-02T16:43:17 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@d08edc5]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping as Data Runmode is N]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping as Data Runmode is N
+at testBase.BaseTest.beforeTest(BaseTest.java:54)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at runner.TestNGRunner.run(TestNGRunner.java:88)
+at runner.JSONRunner.main(JSONRunner.java:102)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewStock -->
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@6b53e23f]" started-at="2024-01-02T16:43:17 IST" name="beforeMethod" finished-at="2024-01-02T16:43:17 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@d08edc5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyStockPresent(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@6b53e23f]" started-at="2024-01-02T16:43:17 IST" name="verifyStockPresent" finished-at="2024-01-02T16:43:17 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@d08edc5]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping as Data Runmode is N]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping as Data Runmode is N
+at testBase.BaseTest.beforeTest(BaseTest.java:54)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at runner.TestNGRunner.run(TestNGRunner.java:88)
+at runner.JSONRunner.main(JSONRunner.java:102)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStockPresent -->
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@6b53e23f]" started-at="2024-01-02T16:43:17 IST" name="beforeMethod" finished-at="2024-01-02T16:43:17 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@d08edc5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyStockQuantity(org.testng.ITestContext,java.lang.String)[pri:0, instance:ff.tests.StockManagement@6b53e23f]" started-at="2024-01-02T16:43:17 IST" name="verifyStockQuantity" finished-at="2024-01-02T16:43:17 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@d08edc5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[addstock]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping as Data Runmode is N]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping as Data Runmode is N
+at testBase.BaseTest.beforeTest(BaseTest.java:54)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at runner.TestNGRunner.run(TestNGRunner.java:88)
+at runner.JSONRunner.main(JSONRunner.java:102)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStockQuantity -->
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@6b53e23f]" started-at="2024-01-02T16:43:17 IST" name="beforeMethod" finished-at="2024-01-02T16:43:17 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@d08edc5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyTransactionHistory(org.testng.ITestContext,java.lang.String)[pri:0, instance:ff.tests.StockManagement@6b53e23f]" started-at="2024-01-02T16:43:17 IST" name="verifyTransactionHistory" finished-at="2024-01-02T16:43:17 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@d08edc5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[addstock]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping as Data Runmode is N]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping as Data Runmode is N
+at testBase.BaseTest.beforeTest(BaseTest.java:54)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at runner.TestNGRunner.run(TestNGRunner.java:88)
+at runner.JSONRunner.main(JSONRunner.java:102)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTransactionHistory -->
+      </class> <!-- ff.tests.StockManagement -->
+      <class name="ff.tests.PortfolioManagement">
+        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@1dd92fe2]" started-at="2024-01-02T16:43:17 IST" name="beforeTest" finished-at="2024-01-02T16:43:17 IST" duration-ms="3" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@d08edc5]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping as Data Runmode is N]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping as Data Runmode is N
+at testBase.BaseTest.beforeTest(BaseTest.java:54)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at runner.TestNGRunner.run(TestNGRunner.java:88)
+at runner.JSONRunner.main(JSONRunner.java:102)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@1dd92fe2]" started-at="2024-01-02T16:43:17 IST" name="beforeMethod" finished-at="2024-01-02T16:43:17 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@d08edc5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="selectPortfolio()[pri:0, instance:ff.tests.PortfolioManagement@1dd92fe2]" started-at="2024-01-02T16:43:17 IST" name="selectPortfolio" finished-at="2024-01-02T16:43:17 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping as Data Runmode is N]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping as Data Runmode is N
+at testBase.BaseTest.beforeTest(BaseTest.java:54)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at runner.TestNGRunner.run(TestNGRunner.java:88)
+at runner.JSONRunner.main(JSONRunner.java:102)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectPortfolio -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@1dd92fe2]" started-at="2024-01-02T16:43:17 IST" name="afterTest" finished-at="2024-01-02T16:43:17 IST" duration-ms="51" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@d08edc5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- ff.tests.PortfolioManagement -->
+    </test> <!-- Add New Stock-New StockIteration-1 -->
   </suite> <!-- Stock Suite -->
 </testng-results>

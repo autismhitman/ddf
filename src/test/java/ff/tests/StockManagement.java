@@ -1,5 +1,6 @@
 package ff.tests;
 
+import org.json.simple.JSONObject;
 import org.testng.ITestContext;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -12,10 +13,12 @@ public class StockManagement extends BaseTest {
 	@Test
 	public void addNewStock(ITestContext con) {
 	   
-		String companyName="Birla Corporation Ltd";
-		String selectionDate ="26-01-2024";
-		String stockQuantity="100";
-		String stockPrice="200";
+		JSONObject data = (JSONObject) con.getAttribute("data");
+				
+		String companyName=(String) data.get("stockname");
+		String selectionDate =(String) data.get("date");
+		String stockQuantity=(String) data.get("quantity");
+		String stockPrice=(String) data.get("price");
 		
 		app.log("Adding "+ stockQuantity+" stocks of "+ companyName);
 		
@@ -40,9 +43,11 @@ public class StockManagement extends BaseTest {
 	
 	
 	@Test
-	public void verifyStockPresent() {
+	public void verifyStockPresent(ITestContext con) {
+		
+		JSONObject data = (JSONObject) con.getAttribute("data");
+		String companyName=(String) data.get("stockname");
  
-		String companyName="Birla Corporation Ltd";
 		int row =app.getRowNumWithCellData("table_stock_css", companyName);
 		if(row==-1)
 			app.reportFailure("Stock Not present" + companyName, true);
@@ -54,11 +59,11 @@ public class StockManagement extends BaseTest {
 	@Test
 	public void verifyStockQuantity(ITestContext con, String action) {
 		
-	 
-		String companyName="Birla Corporation Ltd";
-		String selectionDate ="26-01-2024";
-		String stockQuantity="100";
-		String stockPrice="200";
+		JSONObject data = (JSONObject) con.getAttribute("data");
+		String companyName=(String) data.get("stockname");
+		String selectionDate =(String) data.get("date");
+		String stockQuantity=(String) data.get("quantity");
+		String stockPrice=(String) data.get("price");
 		
 		
 		app.log("Verifying stock quantity after action - "+ action);
@@ -85,12 +90,13 @@ public class StockManagement extends BaseTest {
 	
 	@Parameters({"action"})
 	@Test
-	public void verifyTransactionHistory(String action) {
+	public void verifyTransactionHistory(ITestContext con,String action) {
 		
-		String companyName="Birla Corporation Ltd";
-		String selectionDate ="26-01-2024";
-		String stockQuantity="100";
-		String stockPrice="200";
+		JSONObject data = (JSONObject) con.getAttribute("data");
+		String companyName=(String) data.get("stockname");
+		String selectionDate =(String) data.get("date");
+		String stockQuantity=(String) data.get("quantity");
+		String stockPrice=(String) data.get("price");
 		
 		app.log("Verifying transaction History for "+action+"for quantity "+stockQuantity);
 		app.goToTransactionHistory(companyName);
