@@ -6,11 +6,11 @@
        "parameternames":["action"],
         "executions":[
           {
-            "runmode":"Y",
+           
 		      "executionname":"New Stock",
 		      "dataflag":"addfreshstock",
 		      "parametervalues":["addstock"],
-		      "methods":["selectPortFolio","addNewStock","verifyStockPresent","verifyStockQuantity","verifyTransactionHistory"]
+		      "methods":["selectPortfolio","addNewStock","verifyStockPresent","verifyStockQuantity","verifyTransactionHistory"]
 		   }
         ]
     }

@@ -66,20 +66,21 @@ public class TestNGRunner {
 	public void addTestClass(String className, List<String> includedMethodNames) {
 		
 		XmlClass testClass=new XmlClass(className);
-		List<XmlInclude> classMethods1 = new ArrayList<XmlInclude>();
+		
+		List<XmlInclude> classMethods = new ArrayList<XmlInclude>();
 		int priority=1;
 		for(String methodName: includedMethodNames) {
 			XmlInclude method = new XmlInclude(methodName, priority);
-			classMethods1.add(method);
+			classMethods.add(method);
 			priority++;
 		}
-		testClass.setIncludedMethods(classMethods1);
+		testClass.setIncludedMethods(classMethods);
 		
 		testClasses.add(testClass);
 	}
 	
 	public void addListener(String listenerFile) {
-		suite.addListener("listener.MyTestNGListener");
+		suite.addListener(listenerFile);
 	}
 	
 	

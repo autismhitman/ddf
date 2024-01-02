@@ -7,7 +7,7 @@
 		},
 		{
 		 "class":"ff.tests.StockManagement",
-		 "methods":["addNewStock","verifyStockPresent","verifyStockQuantity","verifyTrasactionHistory"]
+		 "methods":["addNewStock","verifyStockPresent","verifyStockQuantity","verifyTransactionHistory"]
 		}
 		
 		

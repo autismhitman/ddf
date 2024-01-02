@@ -2,64 +2,64 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-28T11:21:17 IST" name="Suite Stocks" finished-at="2023-12-28T11:22:14 IST" duration-ms="56860">
+  <suite started-at="2024-01-02T12:59:33 IST" name="Stock Suite" finished-at="2024-01-02T13:00:18 IST" duration-ms="45156">
     <groups>
     </groups>
-    <test started-at="2023-12-28T11:21:17 IST" name="Add New Stock Test" finished-at="2023-12-28T11:22:14 IST" duration-ms="56860">
+    <test started-at="2024-01-02T12:59:33 IST" name="Add New Stock-New Stock" finished-at="2024-01-02T13:00:18 IST" duration-ms="45156">
       <class name="ff.tests.StockManagement">
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@517cd4b]" started-at="2023-12-28T11:21:51 IST" name="beforeMethod" finished-at="2023-12-28T11:21:51 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:08 IST" name="beforeMethod" finished-at="2024-01-02T13:00:08 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@16eedaa6]]>
+                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="addNewStock(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@517cd4b]" started-at="2023-12-28T11:21:51 IST" name="addNewStock" finished-at="2023-12-28T11:22:09 IST" duration-ms="17009" status="PASS">
+        <test-method signature="addNewStock(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:08 IST" name="addNewStock" finished-at="2024-01-02T13:00:15 IST" duration-ms="6224" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@16eedaa6]]>
+                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewStock -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@517cd4b]" started-at="2023-12-28T11:22:09 IST" name="beforeMethod" finished-at="2023-12-28T11:22:09 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:15 IST" name="beforeMethod" finished-at="2024-01-02T13:00:15 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@16eedaa6]]>
+                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyStockPresent()[pri:0, instance:ff.tests.StockManagement@517cd4b]" started-at="2023-12-28T11:22:09 IST" name="verifyStockPresent" finished-at="2023-12-28T11:22:09 IST" duration-ms="590" status="PASS">
+        <test-method signature="verifyStockPresent()[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:15 IST" name="verifyStockPresent" finished-at="2024-01-02T13:00:15 IST" duration-ms="331" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyStockPresent -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@517cd4b]" started-at="2023-12-28T11:22:09 IST" name="beforeMethod" finished-at="2023-12-28T11:22:09 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:15 IST" name="beforeMethod" finished-at="2024-01-02T13:00:15 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@16eedaa6]]>
+                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyStockQuantity(org.testng.ITestContext,java.lang.String)[pri:0, instance:ff.tests.StockManagement@517cd4b]" started-at="2023-12-28T11:22:09 IST" name="verifyStockQuantity" finished-at="2023-12-28T11:22:10 IST" duration-ms="1113" status="PASS">
+        <test-method signature="verifyStockQuantity(org.testng.ITestContext,java.lang.String)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:15 IST" name="verifyStockQuantity" finished-at="2024-01-02T13:00:15 IST" duration-ms="416" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@16eedaa6]]>
+                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
               </value>
             </param>
             <param index="1">
@@ -71,18 +71,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyStockQuantity -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@517cd4b]" started-at="2023-12-28T11:22:10 IST" name="beforeMethod" finished-at="2023-12-28T11:22:10 IST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@16eedaa6]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTrasactionHistory(java.lang.String)[pri:0, instance:ff.tests.StockManagement@517cd4b]" started-at="2023-12-28T11:22:10 IST" name="verifyTrasactionHistory" finished-at="2023-12-28T11:22:12 IST" duration-ms="2131" status="PASS">
+        <test-method signature="verifyTransactionHistory(java.lang.String)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:15 IST" name="verifyTransactionHistory" finished-at="2024-01-02T13:00:17 IST" duration-ms="1230" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -92,40 +81,51 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTrasactionHistory -->
-      </class> <!-- ff.tests.StockManagement -->
-      <class name="ff.tests.PortfolioManagement">
-        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@7181ae3f]" started-at="2023-12-28T11:21:17 IST" name="beforeTest" finished-at="2023-12-28T11:21:49 IST" duration-ms="32139" status="PASS">
+        </test-method> <!-- verifyTransactionHistory -->
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.StockManagement@62fdb4a6]" started-at="2024-01-02T13:00:15 IST" name="beforeMethod" finished-at="2024-01-02T13:00:15 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@16eedaa6]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@7181ae3f]" started-at="2023-12-28T11:21:50 IST" name="beforeMethod" finished-at="2023-12-28T11:21:50 IST" duration-ms="13" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@16eedaa6]]>
+                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="selectPortfolio()[pri:0, instance:ff.tests.PortfolioManagement@7181ae3f]" started-at="2023-12-28T11:21:50 IST" name="selectPortfolio" finished-at="2023-12-28T11:21:51 IST" duration-ms="1852" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectPortfolio -->
-        <test-method is-config="true" signature="afterTest(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@7181ae3f]" started-at="2023-12-28T11:22:12 IST" name="afterTest" finished-at="2023-12-28T11:22:14 IST" duration-ms="1614" status="PASS">
+      </class> <!-- ff.tests.StockManagement -->
+      <class name="ff.tests.PortfolioManagement">
+        <test-method is-config="true" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@701fc37a]" started-at="2024-01-02T12:59:33 IST" name="beforeTest" finished-at="2024-01-02T13:00:08 IST" duration-ms="34660" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@16eedaa6]]>
+                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@701fc37a]" started-at="2024-01-02T13:00:08 IST" name="beforeMethod" finished-at="2024-01-02T13:00:08 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="selectPortfolio()[pri:0, instance:ff.tests.PortfolioManagement@701fc37a]" started-at="2024-01-02T13:00:08 IST" name="selectPortfolio" finished-at="2024-01-02T13:00:08 IST" duration-ms="495" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectPortfolio -->
+        <test-method is-config="true" signature="afterTest(org.testng.ITestContext)[pri:0, instance:ff.tests.PortfolioManagement@701fc37a]" started-at="2024-01-02T13:00:17 IST" name="afterTest" finished-at="2024-01-02T13:00:18 IST" duration-ms="1710" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@58b5a2f3]]>
               </value>
             </param>
           </params>
@@ -133,6 +133,6 @@
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- ff.tests.PortfolioManagement -->
-    </test> <!-- Add New Stock Test -->
-  </suite> <!-- Suite Stocks -->
+    </test> <!-- Add New Stock-New Stock -->
+  </suite> <!-- Stock Suite -->
 </testng-results>

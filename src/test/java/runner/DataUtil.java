@@ -23,7 +23,7 @@ public class DataUtil {
 		String path=System.getProperty("user.dir")+"\\src\\test\\resources\\jsons\\classmethods.json";
 		JSONParser parser = new JSONParser();
 		JSONObject json=(JSONObject)parser.parse(new FileReader(new File(path)));
-		JSONArray classDetails = (JSONArray)json.get("classdetails");//jsonarray
+		JSONArray classDetails = (JSONArray)json.get("classdetails");
 		for(int cMId=0;cMId<classDetails.size();cMId++) {
 			JSONObject classDetail = (JSONObject)classDetails.get(cMId);
 			String className= (String)classDetail.get("class");
@@ -36,7 +36,7 @@ public class DataUtil {
 			System.out.println("-----------------");
 		}
 		
-		System.out.println(classMethodMap);
+		
 		return classMethodMap;
 
 	}

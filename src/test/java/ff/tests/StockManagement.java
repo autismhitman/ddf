@@ -85,7 +85,7 @@ public class StockManagement extends BaseTest {
 	
 	@Parameters({"action"})
 	@Test
-	public void verifyTrasactionHistory(String action) {
+	public void verifyTransactionHistory(String action) {
 		
 		String companyName="Birla Corporation Ltd";
 		String selectionDate ="26-01-2024";

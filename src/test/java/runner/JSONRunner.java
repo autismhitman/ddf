@@ -19,7 +19,6 @@ public class JSONRunner {
 		
 		
 		Map<String, String> classMethods2 = new DataUtil().loadClassMethods();
-		
 		String path = System.getProperty("user.dir")+"\\src\\test\\resources\\jsons\\testconfig.json";
 		JSONParser parser = new JSONParser();
 		JSONObject jo = (JSONObject) parser.parse(new FileReader(new File(path)));
@@ -41,7 +40,7 @@ public class JSONRunner {
 					 pTests= true;
 			 	testRun.createSuite(name, pTests);//2
 				
-			 //	testRun.addListener("listener.CustomListener");//3
+			 	testRun.addListener("listener.CustomListener");//3
 				
 				String pathSuite = System.getProperty("user.dir")+"\\src\\test\\resources\\jsons\\"+suitefilename ;
 				
@@ -63,8 +62,9 @@ public class JSONRunner {
 						 JSONArray parametervalues = ( JSONArray) execution.get("parametervalues");
 						 JSONArray methods = (JSONArray) execution.get("methods");
 						 
+						 System.out.println(testName +"--"+ executionname +"====="+parameterName+"===" + parametervalues);
 						 testRun.addTest(testName +"-" +executionname); //4
-						 
+					 	 
 						 for( int pid= 0; pid <parameterName.size(); pid++) {
 							 testRun.addTestParameter((String)parameterName.get(pid), (String)parametervalues.get(pid) );//5
 						 }
@@ -74,7 +74,7 @@ public class JSONRunner {
 							 for(int mId=0;mId<methods.size();mId++) {
 								 String method = (String)methods.get(mId);
 								 String methodClass=classMethods2.get(method);
-								 //System.out.println(method +" -- "+ methodClass);
+								  System.out.println(method +" -- "+ methodClass);
 									 if(mId==methods.size()-1 || !((String)classMethods2.get((String)methods.get(mId+1))).equals(methodClass)) {
 										 // next method is from different class
 										 includedMethods.add(method);
@@ -87,14 +87,16 @@ public class JSONRunner {
 							 }
 	
 							System.out.println("-----------------------------"); 
-							 
+					  
 		            }
             	 }
-				testRun.run();//7
+				
+			testRun.run();//7
+			
 			}
 			
 			
-		}
+		} 
 		
 
 
