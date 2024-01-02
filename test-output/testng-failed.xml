@@ -13,20 +13,20 @@
       <class name="ff.tests.PortfolioManagement">
         <methods>
           <include name="beforeMethod"/>
+          <include name="beforeTest"/>
           <include name="afterTest"/>
           <include name="selectPortfolio"/>
-          <include name="beforeTest"/>
         </methods>
       </class> <!-- ff.tests.PortfolioManagement -->
       <class name="ff.tests.StockManagement">
         <methods>
-          <include name="beforeMethod"/>
           <include name="verifyStockQuantity"/>
-          <include name="afterTest"/>
-          <include name="verifyStockPresent"/>
-          <include name="verifyTransactionHistory"/>
+          <include name="beforeMethod"/>
           <include name="beforeTest"/>
+          <include name="verifyStockPresent"/>
           <include name="addNewStock"/>
+          <include name="verifyTransactionHistory"/>
+          <include name="afterTest"/>
         </methods>
       </class> <!-- ff.tests.StockManagement -->
     </classes>
